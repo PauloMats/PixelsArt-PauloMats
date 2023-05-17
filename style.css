@@ -1,5 +1,11 @@
+
 #color-palette {
     border: 1px;
     border-color: black;
     border-style: solid;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    
 }
