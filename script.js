@@ -19,7 +19,8 @@ function randomColor() {
   return color;
 }
 
-const colors = document.getElementsByClassName('color');
+const colors = document.querySelectorAll('.color');
+console.log(colors);
 
 const button = document.getElementById('button-random-color');
 
