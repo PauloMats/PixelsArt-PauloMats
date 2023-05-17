@@ -20,13 +20,12 @@ function randomColor() {
 }
 
 const colors = document.querySelectorAll('.color');
-console.log(colors);
 
 const button = document.getElementById('button-random-color');
 
 button.addEventListener('click', () => {
-  for (let i = 1; i <= colors.length; i += 1) {
+  for (let i = 1; i < colors.length; i += 1) {
     const coresRandom = colors[i];
-    coresRandom[i].style.backgroundColor = randomColor();
+    coresRandom.style.backgroundColor = randomColor();
   }
 });
