@@ -23,8 +23,8 @@ function randomColor() {
 const colors = document.getElementsByClassName('color');
 
 button.addEventListener('click', () => {
-    for (let i = 1; i <= 3; i += 1){
-        let coresRandom = color[i];
-        color[i].style.backgroundColor = randomColor();
+    for (let i = 1; i <= colors.length; i += 1){
+        let coresRandom = colors[i];
+        coresRandom[i].style.backgroundColor = randomColor();
     }
 });
