@@ -20,6 +20,8 @@ function randomColor() {
   return color;
 }
 
+const colors = document.getElementsByClassName('color');
+
 button.addEventListener('click', () => {
     for (let i = 1; i <= 3; i += 1){
         let coresRandom = color[i];
