@@ -7,10 +7,15 @@
     justify-content: center;
     flex-direction: row;
     align-items: center;
+    
+    
 }
 
 .color{
     border: 1px;
     border-color: black;
     border-style: solid;
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
 }

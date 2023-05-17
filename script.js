@@ -1,7 +1,5 @@
 const colorBlack = document.getElementsByClassName('color')[0];
-
 colorBlack.style.backgroundColor = 'black';
-colorBlack.style.color = 'white';
 
 const color1 = document.getElementsByClassName('color')[1];
 color1.style.backgroundColor = 'red';
@@ -11,5 +9,22 @@ color2.style.backgroundColor = 'green';
 
 const color3 = document.getElementsByClassName('color')[3];
 color3.style.backgroundColor = 'blue';
-color3.style.color = 'white';
 
+/*
+
+function randomColor() {
+  const codColor = '0123456789ABCDEF';
+  let color = '#';
+  for (let i = 0; i < 6; i += 1) {
+    color += randomColor[Math.floor(Math.random() * 16)];
+  }
+  return color;
+}
+
+button.addEventListener('click', () => {
+    for (let i = 1; i <= 3; i += 1){
+        let coresRandom = color[i];
+        color[i].style.backgroundColor = randomColor();
+    }
+});
+/*
