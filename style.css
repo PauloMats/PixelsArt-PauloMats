@@ -8,26 +8,3 @@
     flex-direction: row;
     align-items: center;
 }
-.color{
-    background-color: black;
-    margin: auto;
-    color: white
-    
-}
-.color1{
-    background-color: red;
-    margin: auto;
-}
-.color2{
-    background-color: green;
-    margin: auto;
-    color: white
-}
-.color3{
-    background-color: blue;
-    margin: auto;
-}
-
-#button-random-color{
-margin-top: 10px;
-}
