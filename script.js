@@ -10,7 +10,6 @@ color2.style.backgroundColor = 'green';
 const color3 = document.getElementsByClassName('color')[3];
 color3.style.backgroundColor = 'blue';
 
-/*
 
 function randomColor() {
   const codColor = '0123456789ABCDEF';
@@ -27,4 +26,3 @@ button.addEventListener('click', () => {
         color[i].style.backgroundColor = randomColor();
     }
 });
-/*
