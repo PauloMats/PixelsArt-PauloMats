@@ -46,9 +46,9 @@ const guardarCor = () => {
     colors[i].style.backgroundColor = restColor[i];
   }
 };
-window.onload = function () {
+window.onload = function onload() {
   guardarCor();
-};
+} ;
 
 // 6 - Adicionar um quadro com 25 pixels (5x5)
 
@@ -69,4 +69,23 @@ for (let i = 0; i < 5; i += 1) {
   }
 }
 
-// 7 - Faça com que cada pixel do quadro tenha largura e altura de 40 pixels e borda preta de 1 pixel de espessura
+//8 - Defina a cor preta como cor inicial da paleta de cores
+
+colorBlack.classList.add('selected');
+
+
+
+//9 - Crie uma função para selecionar uma cor na paleta de cores
+
+
+
+
+//10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
+
+
+
+//11 - Crie um botão que retorne a cor do quadro para a cor inicial
+
+
+
+//12 - Crie uma função para salvar e recuperar o seu desenho atual no localStorage
