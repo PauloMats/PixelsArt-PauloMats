@@ -23,17 +23,18 @@ function randomColor() {
 }
 
 const colors = document.querySelectorAll('.color');
-
 const button = document.getElementById('button-random-color');
 
 button.addEventListener('click', () => {
   const randomColorLs = [];
 
   for (let i = 1; i < colors.length; i += 1) {
-    randomColorLs.push(colors[i].style.backgroundColor);
     const coresRandom = colors[i];
     coresRandom.style.backgroundColor = randomColor();
+    randomColorLs.push(colors[i].style.backgroundColor);
   }
+
+
   localStorage.setItem('restoreColor', JSON.stringify(randomColorLs));
 });
 
@@ -41,14 +42,18 @@ button.addEventListener('click', () => {
 
 const guardarCor = () => {
   const restColor = JSON.parse(localStorage.getItem('restoreColor'));
+  
+  console.log(restColor);
 
   for (let i = 1; i < colors.length; i += 1) {
     colors[i].style.backgroundColor = restColor[i];
   }
 };
-window.onload = function onload() {
-  guardarCor();
-} ;
+window.onload = () => {
+  if (localStorage.restoreColor) {
+    guardarCor();
+} 
+}
 
 // 6 - Adicionar um quadro com 25 pixels (5x5)
 
@@ -59,7 +64,7 @@ main.appendChild(quadro);
 
 for (let i = 0; i < 5; i += 1) {
   const colunas = document.createElement('div');
-  colunas.className = 'pixel';
+  //colunas.className = 'pixel';
   quadro.appendChild(colunas);
 
   for (let i2 = 0; i2 < 5; i2 += 1) {
