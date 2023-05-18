@@ -29,3 +29,19 @@ button.addEventListener('click', () => {
     coresRandom.style.backgroundColor = randomColor();
   }
 });
+//5 - Implemente uma função usando localStorage para que a paleta de cores gerada aleatoriamente seja mantida após recarregar a página
+
+
+//6 - Adicionar um quadro 5 x 5 com 25 pixels
+const quadro = document.createElement('section');
+quadro.className = 'pixel-board';
+main.appendChild(quadro);
+console.log(quadro);
+
+// const espacosQuadro () => {
+//     for (let i = 0; i < 6; i+= 1){
+//         const espacos = document.createElement('div');
+//         espacos.tagName
+//     }
+    
+//     }
