@@ -62,7 +62,7 @@ for (let i = 0; i < 5; i += 1) {
   colunas.className = 'pixel';
   quadro.appendChild(colunas);
 
-  for (let i2 = 0; i2 < 4; i2 += 1) {
+  for (let i2 = 0; i2 < 5; i2 += 1) {
     const linhas = document.createElement('div');
     linhas.className = 'pixel';
     colunas.appendChild(linhas);
