@@ -46,21 +46,27 @@ const guardarCor = () => {
     colors[i].style.backgroundColor = restColor[i];
   }
 };
-window.onload = function(){ 
+window.onload = function () {
   guardarCor();
 };
 
 // 6 - Adicionar um quadro com 25 pixels (5x5)
 
 const quadro = document.createElement('section');
-quadro.tagName = 'pixel-board';
+quadro.id = 'pixel-board';
 const main = document.querySelector('main');
 main.appendChild(quadro);
 
-for (let i = 0; i < 6; i += 1) {
-  const linhas = document.createElement('div');
-  linhas.className = 'pixel';
-  quadro.appendChild(linhas);
+for (let i = 0; i < 5; i += 1) {
+  const colunas = document.createElement('div');
+  colunas.className = 'pixel';
+  quadro.appendChild(colunas);
+
+  for (let i2 = 0; i2 < 4; i2 += 1) {
+    const linhas = document.createElement('div');
+    linhas.className = 'pixel';
+    colunas.appendChild(linhas);
+  }
 }
 
 // 7 - Faça com que cada pixel do quadro tenha largura e altura de 40 pixels e borda preta de 1 pixel de espessura

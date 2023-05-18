@@ -22,3 +22,27 @@
     margin: 5px
 
 }
+#pixel-board{
+    
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+}
+.pixel{
+    margin: auto;
+    border: 1px;
+    border-color: black;
+    border-style: solid;
+    width: 40px;
+    height: 40px;
+    display: flexbox;
+    margin: 10px;
+}
+
+#button-random-color{
+    
+    height: 40px;
+    margin-top: 5px;
+    margin-left: 276px;
+    margin-bottom: 5px;
+}
