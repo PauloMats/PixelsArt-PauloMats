@@ -38,10 +38,13 @@ quadro.className = 'pixel-board';
 main.appendChild(quadro);
 console.log(quadro);
 
-// const espacosQuadro () => {
-//     for (let i = 0; i < 6; i+= 1){
-//         const espacos = document.createElement('div');
-//         espacos.tagName
-//     }
+const espacosQuadro () => {
+     for (let i = 0; i < 6; i+= 1){
+        const espacos = document.createElement('div');
+       espacos.tagName = 'pixel';
+       espacos.style.height = 40px;
+       espacos.style.width = 40px;
+      quadro.appendChild(espacos);
+    }
     
-//     }
+}
