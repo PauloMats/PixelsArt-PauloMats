@@ -1,3 +1,5 @@
+//2 e 3 Adiciona paleta com 4 cores diferentes, adiciona a primeira cor como preta.
+
 const colorBlack = document.getElementsByClassName('color')[0];
 colorBlack.style.backgroundColor = 'black';
 
@@ -10,6 +12,8 @@ color2.style.backgroundColor = 'green';
 const color3 = document.getElementsByClassName('color')[3];
 color3.style.backgroundColor = 'blue';
 
+
+//4 - Adicione um botão para gerar cores aleatórias para a paleta de cores
 function randomColor() {
   const codColor = '0123456789ABCDEF';
   let color = '#';
@@ -28,15 +32,21 @@ button.addEventListener('click', () => {
     const coresRandom = colors[i];
     coresRandom.style.backgroundColor = randomColor();
   }
+  localStorage.setItem('restoreColor', color);
 });
+
+
 //5 - Implemente uma função usando localStorage para que a paleta de cores gerada aleatoriamente seja mantida após recarregar a página
+
+const guardarCor = () => {
+  const restColor = localStorage.getItem('restoreColor')
+}
 
 
 //6 - Adicionar um quadro 5 x 5 com 25 pixels
 const quadro = document.createElement('section');
 quadro.className = 'pixel-board';
 main.appendChild(quadro);
-console.log(quadro);
 
 const espacosQuadro () => {
      for (let i = 0; i < 6; i+= 1){
