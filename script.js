@@ -39,26 +39,35 @@ const pegarCorPixelBoard = document.getElementById('pixel-board');
 const pegarCor = () => {
   const pegarCorPixelBoard.innerTExt = localStorage.getItem('pixel-Board');
 }
+const colocaCor = () => {
+  if (localStorage.getItem('colorPalette')) {
+    const recuperaCor = JSON.parse(localStorage.getItem('colorPalette'));
+    for (let i = 0; i < colors.length; i += 1) {
+      colors[i].style.backgroundColor = recuperaCor[i];
+    }
+  } if (localStorage.getItem('pixel-board')) {
+    pegarCor();
+  }
+};
 
 
 // 6 - Adicionar um quadro com 25 pixels (5x5)
 
-const quadro = document.createElement('section');
-quadro.id = 'pixel-board';
-const main = document.querySelector('main');
-main.appendChild(quadro);
+// const quadro = document.createElement('section');
+// quadro.id = 'pixel-board';
+// const main = document.querySelector('main');
+// main.appendChild(quadro);
 
-for (let i = 0; i < 5; i += 1) {
-  const colunas = document.createElement('div');
-  // colunas.className = 'pixel';
-  quadro.appendChild(colunas);
+// for (let i = 0; i < 5; i += 1) {
+//   const colunas = document.createElement('div');
+//   quadro.appendChild(colunas);
 
-  for (let i2 = 0; i2 < 5; i2 += 1) {
-    const linhas = document.createElement('div');
-    linhas.className = 'pixel';
-    colunas.appendChild(linhas);
-  }
-}
+//   for (let i2 = 0; i2 < 5; i2 += 1) {
+//     const linhas = document.createElement('div');
+//     linhas.className = 'pixel';
+//     colunas.appendChild(linhas);
+//   }
+// }
 
 // 8 - Defina a cor preta como cor inicial da paleta de cores
 
