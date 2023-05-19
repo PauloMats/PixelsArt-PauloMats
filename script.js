@@ -13,27 +13,23 @@ const color3 = document.getElementsByClassName('color')[3];
 color3.style.backgroundColor = 'green';
 
 // 4 - Adicione um botão para gerar cores aleatórias para a paleta de cores
-function randomColor() {
-  const codColor = '0123456789ABCDEF';
-  let color = '#';
-  for (let i = 0; i < 6; i += 1) {
-    color += codColor[Math.floor(Math.random() * 16)];
-  }
-  return color;
-}
 
 const colors = document.querySelectorAll('.color');
 const button = document.getElementById('button-random-color');
 
 button.addEventListener('click', () => {
-  const randomColorLs = [];
-
-  for (let i = 1; i < colors.length; i += 1) {
-    randomColorLs.push(randomColor());
-    randomColorLs.style.backgroundColor;
+  const colorPalette = [];
+  for (let i = 0; i < colors.length; i += 1) {
+    button.addEventListener('click', () => {
+      if (i !== 0) {
+        const r = Math.floor(Math.random() * 256);
+        const g = Math.floor(Math.random() * 256);
+        const b = Math.floor(Math.random() * 256);
+        colors[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+      }
+      colorPalette.push(colors[i].style.backgroundColor);
+    });
   }
-
-  localStorage.setItem('restoreColor', JSON.stringify(randomColorLs));
 });
 
 // 5 - Implemente uma função usando localStorage para que a paleta de cores gerada aleatoriamente seja mantida após recarregar a página
