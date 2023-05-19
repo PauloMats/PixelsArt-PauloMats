@@ -9,7 +9,7 @@ colors[3].style.backgroundColor = 'green';
 
 // 4 - Adicione um botão para gerar cores aleatórias para a paleta de cores e adicionei o botão limpar cores
 
-const botaoClear = document.getElementById('clear-board');
+
 const button = document.getElementById('button-random-color');
 const pegarCorPixelBoard = document.getElementById('pixel-board');
 
@@ -60,6 +60,10 @@ const selecionaCor = () => {
   }
 };
 
+function setarCorPixel() {
+  localStorage.setItem('pixelBoard', pegarCorPixelBoard.innerHTML);
+}
+
 const pintarPixel = () => {
   let corSelecionada;
   for (let index = 0; index < colors.length; index += 1) {
@@ -78,16 +82,14 @@ const pintar = () => {
     });
   }
 };
+const botaoClear = document.getElementById('clear-board');
 
 function clearQuadroPixels() {
   const unidadePixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < unidadePixel.length; index += 1) {
-    unidadePixel[index].style.backgroundColor = 'white';
+    unidadePixel[index].style.backgroundColor = 'rgb(255, 255, 255)';
   }
-}
-
-function setarCorPixel() {
-  localStorage.setItem('pixelBoard', pegarCorPixelBoard.innerHTML);
+  return unidadePixel;
 }
 
 pegarCorPixelBoard.addEventListener('click', setarCorPixel());
