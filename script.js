@@ -34,20 +34,12 @@ button.addEventListener('click', () => {
 
 // 5 - Implemente uma função usando localStorage para que a paleta de cores gerada aleatoriamente seja mantida após recarregar a página
 
-const guardarCor = () => {
-  const restColor = JSON.parse(localStorage.getItem('restoreColor'));
+const pegarCorPixelBoard = document.getElementById('pixel-board');
 
-  console.log(restColor);
+const pegarCor = () => {
+  const pegarCorPixelBoard.innerTExt = localStorage.getItem('pixel-Board');
+}
 
-  for (let i = 1; i < colors.length; i += 1) {
-    colors[i].style.backgroundColor = restColor[i];
-  }
-};
-window.onload = () => {
-  if (localStorage.restoreColor) {
-    guardarCor();
-  }
-};
 
 // 6 - Adicionar um quadro com 25 pixels (5x5)
 
