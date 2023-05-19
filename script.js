@@ -37,11 +37,15 @@ button.addEventListener('click', () => {
 
  const pegarCorPixelBoard = document.getElementById('pixel-board');
 
+ function setarCorPixel() {
+  localStorage.setItem('pixelBoard', pegarCorPixelBoard.innerHTML);
+}
+
  const pegarCor = () => {
    const pegarCorPixelBoard.innerHTML = localStorage.getItem('pixelBoard');
  };
 
- const colocaCor = () => {
+ const startPalet = () => {
    if (localStorage.getItem('colorPalette')) {
      const recuperaCor = JSON.parse(localStorage.getItem('colorPalette'));
      for (let i = 0; i < colors.length; i += 1) {
@@ -52,14 +56,18 @@ button.addEventListener('click', () => {
    }
  };
 
+
 // 8 - Defina a cor preta como cor inicial da paleta de cores
 
 colorBlack.classList.add('selected');
 
 // 9 - Crie uma função para selecionar uma cor na paleta de cores
+pegarCorPixelBoard.addEventListener('click', setarCorPixel);
+botaoClear.addEventListener('click', clearQuadroPixels);
+
 
 // 10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
 
-// 11 - Crie um botão que retorne a cor do quadro para a cor inicial
-
-// 12 - Crie uma função para salvar e recuperar o seu desenho atual no localStorage
+window.onload = () => {
+  startPalet();
+};
