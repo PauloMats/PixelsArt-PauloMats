@@ -1,3 +1,4 @@
+/* eslint-disable sonarjs/no-use-of-empty-return-value */
 // 2 e 3 Adiciona paleta com 4 cores diferentes, adiciona a primeira cor como preta.
 
 const colors = document.getElementsByClassName('color');
@@ -8,7 +9,7 @@ colors[3].style.backgroundColor = 'green';
 
 // 4 - Adicione um botão para gerar cores aleatórias para a paleta de cores e adicionei o botão limpar cores
 
-const botaoClear = document.getElementById('#clear-board');
+const botaoClear = document.getElementById('clear-board');
 const button = document.getElementById('button-random-color');
 const pegarCorPixelBoard = document.getElementById('pixel-board');
 
@@ -81,16 +82,16 @@ const pintar = () => {
 function clearQuadroPixels() {
   const unidadePixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < unidadePixel.length; index += 1) {
-    unidadePixel[index].style.backgroundColor = 'rgb(255,255,255)';
+    unidadePixel[index].style.backgroundColor = 'white';
   }
-};
+}
 
 function setarCorPixel() {
   localStorage.setItem('pixelBoard', pegarCorPixelBoard.innerHTML);
 }
 
 pegarCorPixelBoard.addEventListener('click', setarCorPixel());
-// botaoClear.addEventListener('click', clearQuadroPixels());
+botaoClear.addEventListener('click', clearQuadroPixels());
 
 window.onload = () => {
   startPalet();
