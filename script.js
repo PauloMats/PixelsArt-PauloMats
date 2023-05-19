@@ -29,11 +29,9 @@ button.addEventListener('click', () => {
   const randomColorLs = [];
 
   for (let i = 1; i < colors.length; i += 1) {
-    const coresRandom = colors[i];
-    coresRandom.style.backgroundColor = randomColor();
-    randomColorLs.push(colors[i].style.backgroundColor);
+    randomColorLs.push(randomColor());
+    randomColorLs.style.backgroundColor;
   }
-
 
   localStorage.setItem('restoreColor', JSON.stringify(randomColorLs));
 });
@@ -42,7 +40,7 @@ button.addEventListener('click', () => {
 
 const guardarCor = () => {
   const restColor = JSON.parse(localStorage.getItem('restoreColor'));
-  
+
   console.log(restColor);
 
   for (let i = 1; i < colors.length; i += 1) {
@@ -52,8 +50,8 @@ const guardarCor = () => {
 window.onload = () => {
   if (localStorage.restoreColor) {
     guardarCor();
-} 
-}
+  }
+};
 
 // 6 - Adicionar um quadro com 25 pixels (5x5)
 
@@ -64,7 +62,7 @@ main.appendChild(quadro);
 
 for (let i = 0; i < 5; i += 1) {
   const colunas = document.createElement('div');
-  //colunas.className = 'pixel';
+  // colunas.className = 'pixel';
   quadro.appendChild(colunas);
 
   for (let i2 = 0; i2 < 5; i2 += 1) {
@@ -74,23 +72,14 @@ for (let i = 0; i < 5; i += 1) {
   }
 }
 
-//8 - Defina a cor preta como cor inicial da paleta de cores
+// 8 - Defina a cor preta como cor inicial da paleta de cores
 
 colorBlack.classList.add('selected');
 
+// 9 - Crie uma função para selecionar uma cor na paleta de cores
 
+// 10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
 
-//9 - Crie uma função para selecionar uma cor na paleta de cores
+// 11 - Crie um botão que retorne a cor do quadro para a cor inicial
 
-
-
-
-//10 - Crie uma função que permita preencher um pixel do quadro com a cor selecionada na paleta de cores
-
-
-
-//11 - Crie um botão que retorne a cor do quadro para a cor inicial
-
-
-
-//12 - Crie uma função para salvar e recuperar o seu desenho atual no localStorage
+// 12 - Crie uma função para salvar e recuperar o seu desenho atual no localStorage
