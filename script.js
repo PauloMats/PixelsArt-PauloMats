@@ -20,54 +20,37 @@ const button = document.getElementById('button-random-color');
 button.addEventListener('click', () => {
   const colorPalette = [];
   for (let i = 0; i < colors.length; i += 1) {
-    button.addEventListener('click', () => {
+
       if (i !== 0) {
         const r = Math.floor(Math.random() * 256);
         const g = Math.floor(Math.random() * 256);
         const b = Math.floor(Math.random() * 256);
         colors[i].style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
-      }
+      };
       colorPalette.push(colors[i].style.backgroundColor);
-    });
-  }
-});
+      }
+      localStorage.setItem('colorPalette', JSON.stringify(colorPalette));
+  });
+
 
 // 5 - Implemente uma função usando localStorage para que a paleta de cores gerada aleatoriamente seja mantida após recarregar a página
 
-const pegarCorPixelBoard = document.getElementById('pixel-board');
+ const pegarCorPixelBoard = document.getElementById('pixel-board');
 
-const pegarCor = () => {
-  const pegarCorPixelBoard.innerTExt = localStorage.getItem('pixel-Board');
-}
-const colocaCor = () => {
-  if (localStorage.getItem('colorPalette')) {
-    const recuperaCor = JSON.parse(localStorage.getItem('colorPalette'));
-    for (let i = 0; i < colors.length; i += 1) {
-      colors[i].style.backgroundColor = recuperaCor[i];
-    }
-  } if (localStorage.getItem('pixel-board')) {
-    pegarCor();
-  }
-};
+ const pegarCor = () => {
+   const pegarCorPixelBoard.innerHTML = localStorage.getItem('pixelBoard');
+ };
 
-
-// 6 - Adicionar um quadro com 25 pixels (5x5)
-
-// const quadro = document.createElement('section');
-// quadro.id = 'pixel-board';
-// const main = document.querySelector('main');
-// main.appendChild(quadro);
-
-// for (let i = 0; i < 5; i += 1) {
-//   const colunas = document.createElement('div');
-//   quadro.appendChild(colunas);
-
-//   for (let i2 = 0; i2 < 5; i2 += 1) {
-//     const linhas = document.createElement('div');
-//     linhas.className = 'pixel';
-//     colunas.appendChild(linhas);
-//   }
-// }
+ const colocaCor = () => {
+   if (localStorage.getItem('colorPalette')) {
+     const recuperaCor = JSON.parse(localStorage.getItem('colorPalette'));
+     for (let i = 0; i < colors.length; i += 1) {
+       colors[i].style.backgroundColor = recuperaCor[i];
+     }
+   } if (localStorage.getItem('pixelBoard')) {
+     pegarCor();
+   }
+ };
 
 // 8 - Defina a cor preta como cor inicial da paleta de cores
 
