@@ -63,6 +63,14 @@ header {
     margin-bottom: 5px;
 }
 
+#clear-board{
+    
+    border: 1px solid black;
+    margin-top: 15px;
+    background-color: bisque;
+    padding: 3px;
+}
+
 main {
     width: 480px;
     margin: auto;
