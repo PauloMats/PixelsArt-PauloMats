@@ -92,8 +92,8 @@ function clearQuadroPixels() {
   return unidadePixel;
 }
 
-pegarCorPixelBoard.addEventListener('click', setarCorPixel());
-botaoClear.addEventListener('click', clearQuadroPixels());
+pegarCorPixelBoard.addEventListener('click', setarCorPixel);
+botaoClear.addEventListener('click', clearQuadroPixels);
 
 window.onload = () => {
   startPalet();
