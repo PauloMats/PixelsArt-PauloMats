@@ -1,4 +1,5 @@
-/* eslint-disable sonarjs/no-use-of-empty-return-value */
+// Crédito às pessoas que me ajudaram na construção desse projeto no final deste código.
+
 // 2 e 3 Adiciona paleta com 4 cores diferentes, adiciona a primeira cor como preta.
 
 const colors = document.getElementsByClassName('color');
@@ -100,3 +101,11 @@ window.onload = () => {
   selecionaCor();
   pintar();
 };
+
+//Conforme o Código de Conduta da pessoa Estudante, venho prestar agradecimento e dar crédito as pessoas que me ajudaram na construção deste código:
+
+//Obtive ajuda de Nicolas, na mentorial Individual.
+//Obtive ajuda de Claus, aluno da turma 33.
+//Obtive ajuda dos integrantes: Nat, Matheus, Cadu e Luquinhas em diversas mentorias a qual participei.
+
+//Mas todo o código foi feito majotariamente por mim, recebi apenas o auxilio dessas pessoas para que eu pudesse compreender a lógica.
