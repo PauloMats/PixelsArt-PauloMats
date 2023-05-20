@@ -1,16 +1,18 @@
 * {
   padding: 0%;
-  margin: 0%;  
+  margin: 0%;
 }
 
 h1 {
   text-align: center;
-  margin: auto; 
+  margin: auto;
 }
 body {
   background-image: url('https://cdn.pixabay.com/photo/2017/07/28/14/10/background-2548758_1280.jpg');
-  background-repeat: no-repeat
+
+  background-repeat: no-repeat;
 }
+
 header {
   background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-zoom-background-design-template-0e16ab894b33a7cf94b131153423b4f8_screen.jpg?ts=1587228326');
   text-align: center;
@@ -28,59 +30,60 @@ header {
 }
 
 #color-palette {
-    cursor: pointer;
-    border: 1px;
-    border-color: black;
-    border-style: solid;
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    align-items: center;
-    background-color: rgb(201, 201, 201);
+  cursor: pointer;
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(201, 201, 201);
 }
 
 .color {
-    border: 1px;
-    border-color: black;
-    border-style: solid;
-    width: 70px;
-    height: 70px;
-    border-radius: 70px;
-    margin: 5px
+  border: 1px;
+  border-color: black;
+  border-style: solid;
+  width: 70px;
+  height: 70px;
+  border-radius: 70px;
+  margin: 5px
 }
 
 #pixel-board {
-    text-align: center;
-    margin: 30px;
+  text-align: center;
+  margin: 30px;
 }
-.pixel {
-    background: white;
-    border: 1px solid black;
-    width: 40px;
-    height: 40px;
-    display: inline-block;
-    vertical-align: middle;
-    max-width: 100%;
-    padding: 15px;
-    margin: 0%; 
+
+.pixel { 
+  background: white;
+  border: 1px solid black;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 100%;
+  padding: 15px;
+  margin: 0%; 
 }
 
 #button-random-color {
-    cursor: pointer;
-    height: 40px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+  cursor: pointer;
+  height: 40px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #clear-board {
-    cursor: pointer;
-    border: 1px solid black;
-    margin-top: 15px;
-    background-color: bisque;
-    padding: 3px;
+  cursor: pointer;
+  border: 1px solid black;
+  margin-top: 15px;
+  background-color: bisque;
+  padding: 3px;
 }
 
 main {
-    width: 480px;
-    margin: auto;
+  width: 480px;
+  margin: auto;
 }

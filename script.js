@@ -11,10 +11,10 @@ colors[3].style.backgroundColor = 'green';
 // 4 - Adicione um botão para gerar cores aleatórias para a paleta de cores e adicionei o botão limpar cores
 
 const button = document.getElementById('button-random-color');
-const pegarCorPixelBoard = document.getElementById('pixel-board');
+const selecionaCorDoPixelBoard = document.getElementById('pixel-board');
 
 const pegarCor = () => {
-  pegarCorPixelBoard.innerHTML = localStorage.getItem('pixelBoard');
+  selecionaCorDoPixelBoard.innerHTML = localStorage.getItem('pixelBoard');
 };
 
 const startPalet = () => {
@@ -61,7 +61,7 @@ const escolheCor = () => {
 };
 
 function setarCorPixel() {
-  localStorage.setItem('pixelBoard', pegarCorPixelBoard.innerHTML);
+  localStorage.setItem('pixelBoard', selecionaCorDoPixelBoard.innerHTML);
 }
 
 const colorePixel = () => {
@@ -87,18 +87,19 @@ const botaoClear = document.getElementById('clear-board');
 function clearQuadroPixels() {
   const unidadePixel = document.getElementsByClassName('pixel');
   for (let index = 0; index < unidadePixel.length; index += 1) {
-    unidadePixel[index].style.backgroundColor = 'rgb(255, 255, 255)';
+    unidadePixel[index].style.backgroundColor = 'white';
   }
   return unidadePixel;
 }
 
-pegarCorPixelBoard.addEventListener('click', setarCorPixel);
 botaoClear.addEventListener('click', clearQuadroPixels);
 
+selecionaCorDoPixelBoard.addEventListener('click', setarCorPixel);
+
 window.onload = () => {
-  startPalet();
-  escolheCor();
   colorir();
+  escolheCor();
+  startPalet();
 };
 
 //Conforme o Código de Conduta da pessoa Estudante, venho prestar agradecimento e dar crédito as pessoas que me ajudaram na construção deste código:
