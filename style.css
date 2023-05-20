@@ -12,19 +12,19 @@ body {
   background-repeat: no-repeat
 }
 header {
-    background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-zoom-background-design-template-0e16ab894b33a7cf94b131153423b4f8_screen.jpg?ts=1587228326');
-    text-align: center;
-    margin-top: 0px;
-    display: flex;
-    height: 100px;
-    align-items: center;
-    justify-content: space-between;
-    padding-right: 5%;
-    padding-left: 5%;
+  background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-zoom-background-design-template-0e16ab894b33a7cf94b131153423b4f8_screen.jpg?ts=1587228326');
+  text-align: center;
+  margin-top: 0px;
+  display: flex;
+  height: 100px;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 5%;
+  padding-left: 5%;
 }
 
 #section-color {
-    text-align: center;
+  text-align: center;
 }
 
 #color-palette {
