@@ -97,9 +97,9 @@ botaoClear.addEventListener('click', clearQuadroPixels);
 selecionaCorDoPixelBoard.addEventListener('click', setarCorPixel);
 
 window.onload = () => {
-  colorir();
-  escolheCor();
   startPalet();
+  escolheCor();
+  colorir();
 };
 
 //Conforme o Código de Conduta da pessoa Estudante, venho prestar agradecimento e dar crédito as pessoas que me ajudaram na construção deste código:
