@@ -1,15 +1,15 @@
 * {
-    padding: 0%;
-    margin: 0%;  
+  padding: 0%;
+  margin: 0%;  
 }
 
 h1 {
-    text-align: center;
-    margin: auto; 
+  text-align: center;
+  margin: auto; 
 }
 body {
-    background-image: url('https://cdn.pixabay.com/photo/2017/07/28/14/10/background-2548758_1280.jpg');
-    background-repeat: no-repeat
+  background-image: url('https://cdn.pixabay.com/photo/2017/07/28/14/10/background-2548758_1280.jpg');
+  background-repeat: no-repeat
 }
 header {
     background-image: url('https://d1csarkz8obe9u.cloudfront.net/posterpreviews/art-zoom-background-design-template-0e16ab894b33a7cf94b131153423b4f8_screen.jpg?ts=1587228326');
